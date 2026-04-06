@@ -1,6 +1,6 @@
 ---
 
-# ** REFERÊNCIA E SOLUÇÃO DE PROBLEMAS**
+# **REFERÊNCIA E SOLUÇÃO DE PROBLEMAS**
 
 ---
 
