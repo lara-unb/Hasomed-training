@@ -2,6 +2,9 @@
 
 ## Visão Geral do Sistema
 
+<img width="838" height="507" alt="image" src="https://github.com/user-attachments/assets/6837cad6-4148-4e50-9310-37250b7cd14b" />
+
+
 O **RehaStim** é um estimulador de corrente controlada de 8 canais desenvolvido pela **Hasomed GmbH** (Alemanha). É um produto controlado pelo protocolo **ScienceMode** via interface USB (padrão USB 1.1 com isolação galvânica). O processador principal é um microcontrolador de 16 bits de ultra-baixo consumo (MSP430 da Texas Instruments).
 
 >  **Nota:** O RehaStim possui dois módulos de estimulação independentes: o Módulo A controla os canais 1 a 4 e o Módulo B controla os canais 5 a 8. Cada módulo tem sua própria fonte de corrente e microprocessador dedicado ao timing dos pulsos. Isso permite geração simultânea de pulsos nos dois módulos, com um offset fixo de 0,6 ms entre eles.
