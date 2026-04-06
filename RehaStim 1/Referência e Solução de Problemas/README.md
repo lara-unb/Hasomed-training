@@ -24,9 +24,7 @@
 | Sem resposta motora    | Eletrodo solto ou seco             | Reposicionar eletrodo |
 | Resposta assimétrica   | Eletrodos mal posicionados         | Remarcar posição anatômica |
 | Queimação na pele      | Alta densidade de carga            | Reduzir `I` ou aumentar área |
-| Fadiga rápida          | Frequência muito alta              | Reduzir `f` para 25 Hz |
-| Espasmo incontrolável  | Amplitude muito alta               | Reduzir `I`, verificar eletrodo |
-| Corrente sem efeito    | Valor ímpar (arredondado)          | Usar apenas valores pares de mA |
+| Fadiga rápida          | Frequência muito alta              | Fazer pausa ou reduzir a frequência |
 
 ---
 
