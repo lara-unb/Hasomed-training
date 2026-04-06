@@ -1,8 +1,6 @@
----
 
 # **REFERÊNCIA E SOLUÇÃO DE PROBLEMAS**
 
----
 
 ## Diagnóstico e Resolução de Problemas
 
