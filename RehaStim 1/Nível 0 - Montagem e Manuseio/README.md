@@ -42,6 +42,50 @@ Os cabos de estimulação são flexíveis, mas possuem vida útil limitada se ma
 
 ---
 
+## Teste em bancada 
+>  Antes de testar qualquer eletroestimulador na própria pele, é recomendado realizar um teste em bancada para verificar se o equipamento está fornecendo a corrente e a forma de onda esperadas.
+
+![WhatsApp Image 2026-04-07 at 14 22 23](https://github.com/user-attachments/assets/40d48cbe-245b-478e-a54b-c14ac33beead)
+
+
+###Materiais Necessários
+
+- Eletroestimulador e cabo do canal a ser verificado;
+- Resistor de potência — para suportar os pulsos de energia, deve ser dimensionado para aguentar a potência dissipada durante a estimulação;
+- Terminais adaptados para conexão ao resistor;
+- Osciloscópio e cabos de prova.
+
+### Por que usar um resistor?
+ 
+O resistor substitui a pele e o tecido muscular no circuito, simulando a impedância da interface eletrodo-pele. Isso permite observar a forma de onda real da estimulação antes de qualquer contato com o participante.
+
+![WhatsApp Image 2026-04-07 at 14 22 20](https://github.com/user-attachments/assets/ac60467e-bc83-465e-9fac-e81622eb6bef)
+
+No exemplo da imagem a cima, foi utilizado um resistor de **1 kΩ / 5 W**. A escolha do valor segue a Lei de Ohm — com uma corrente de teste de, por exemplo, 10 mA, a tensão esperada nos terminais do resistor será:
+ 
+```
+V = R × I  →  V = 1000 × 0,010 = 10 V
+```
+ 
+A potência dissipada pelo resistor durante um pulso pode ser estimada por:
+ 
+```
+P = I² × R  →  P = (0,010)² × 1000 = 0,1 W
+```
+ 
+Como a estimulação é pulsada (não contínua), a potência média real é muito menor que o pico — por isso um resistor de 5 W oferece margem de segurança adequada para esse tipo de teste.
+ 
+### O que observar no osciloscópio
+ 
+- **Forma de onda bifásica** — confirma que o pulso está sendo gerado corretamente
+- **Largura de pulso (PW)** — deve corresponder ao valor configurado no código
+- **Amplitude de tensão** — dividindo pela resistência, você obtém a corrente real entregue: `I = V / R`
+- **Frequência** — deve bater com o parâmetro `FREQ` configurado
+
+
+
+---
+
 ## Desmontagem e Guarda do Equipamento
 
 1. Encerre a estimulação pelo software (`stop_ccl()`) antes de qualquer desconexão
