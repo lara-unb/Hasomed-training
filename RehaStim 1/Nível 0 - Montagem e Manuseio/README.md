@@ -2,8 +2,7 @@
 
 Antes de testar e programar o Hasomed RehaStim, é fundamental aprender a montar, conectar e desmontar o equipamento corretamente. O mau manuseio dos cabos e conectores é uma das causas mais comuns de falhas de comunicação e de danos ao equipamento.
 
-![WhatsApp Image 2026-04-06 at 12 47 06](https://github.com/user-attachments/assets/27cccd70-25ef-4d7f-bf46-93801ba796d2)
-
+![malaaberta_hasomed](https://github.com/user-attachments/assets/bdefa845-9fc1-4c1b-8fda-6ea37f306a54)
 
 ---
 
@@ -47,8 +46,8 @@ Os cabos de estimulação são flexíveis, mas possuem vida útil limitada se ma
 
 ## Teste em bancada 
 >  Antes de testar qualquer eletroestimulador na própria pele, é recomendado realizar um teste em bancada para verificar se o equipamento está fornecendo a corrente e a forma de onda esperadas.
+![testebancada_hasomed](https://github.com/user-attachments/assets/50a94a19-4104-4474-bc92-6822e2998838)
 
-![WhatsApp Image 2026-04-07 at 14 22 23](https://github.com/user-attachments/assets/f0177582-d491-49c7-896e-c04e06a4116a)
 
 ### Materiais Necessários
 
@@ -61,7 +60,8 @@ Os cabos de estimulação são flexíveis, mas possuem vida útil limitada se ma
  
 O resistor substitui a pele e o tecido muscular no circuito, simulando a impedância da interface eletrodo-pele. Isso permite observar a forma de onda real da estimulação antes de qualquer contato com o participante.
 
-![WhatsApp Image 2026-04-07 at 14 22 20](https://github.com/user-attachments/assets/758621e2-09ba-4719-8c60-68e001694eea)
+![resistordepotencia_hasomed](https://github.com/user-attachments/assets/7dc1e7fb-c5e5-48f7-b6c2-b3aed892ff92)
+
 
 No exemplo da imagem a cima, foi utilizado um resistor de **1 kΩ / 5 W**. A escolha do valor segue a Lei de Ohm — com uma corrente de teste de, por exemplo, 10 mA, a tensão esperada nos terminais do resistor será:
  
