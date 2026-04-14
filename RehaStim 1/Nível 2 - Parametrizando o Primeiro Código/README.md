@@ -2,9 +2,9 @@
 
 ## Contexto e Objetivo
 
-No Nível 1, o `StimNode` era autossuficiente: os parâmetros de porta, frequência, modo e canais ficavam hardcoded como atributos de classe dentro do próprio arquivo. Isso funcionava para um primeiro teste, mas tornava a configuração trabalhosa — para mudar a porta serial era preciso editar o código da classe.
+No Nível 1, o `StimNode` era independente: os parâmetros de porta, frequência, modo e canais ficavam hardcoded como atributos de classe dentro do próprio arquivo. Isso funcionava para um primeiro teste, mas tornava a configuração trabalhosa — para mudar a porta serial era preciso editar o código da classe.
 
-Neste nível, duas mudanças estruturais foram feitas:
+Neste nível de aprendizado, duas mudanças estruturais foram feitas:
 
 1. **`StimNode` foi parametrizado** — os atributos de classe fixos foram substituídos por argumentos do construtor `__init__`, tornando a classe reutilizável sem modificação.
 2. **`main.py` foi separado** — toda a lógica de execução e configuração saiu do `stim_node.py` e foi para um arquivo dedicado. O `stim_node.py` agora é puramente uma biblioteca.
@@ -52,7 +52,7 @@ class StimNode:
         self.serial_port = serial.Serial(port=self.PORT, ...)
 ```
 
-A classe em si não tem mais nenhuma opinião sobre qual porta usar ou qual frequência aplicar. Quem instanciar `StimNode` é responsável por passar todos os parâmetros. Isso é importante porque o mesmo `stim_node.py` pode agora ser importado por qualquer script sem precisar ser editado.
+A classe em si não tem mais nenhum comando sobre qual porta usar ou qual frequência aplicar. Quem instanciar `StimNode` é responsável por passar todos os parâmetros. Isso é importante porque o mesmo `stim_node.py` pode agora ser importado por qualquer script sem precisar ser editado.
 
 > **Nota:** O `command_dict` e `channel_stim` permanecem como atributos de classe, pois são constantes do protocolo ScienceMode e não variam entre sessões.
 
@@ -102,7 +102,7 @@ def main():
     stim.stop_ccl()
 ```
 
-O fluxo `initialize_ccl → update_ccl → stop_ccl` é idêntico ao do Nível 1. O que mudou é apenas onde a configuração vive e como chega até a classe.
+O fluxo `initialize_ccl → update_ccl → stop_ccl` é idêntico ao do Nível 1. O que mudou é apenas onde a configuração está localizada e como chegar até a classe.
 
 ---
 
@@ -121,17 +121,6 @@ O fluxo `initialize_ccl → update_ccl → stop_ccl` é idêntico ao do Nível 1
 | `PULSE_CURRENT` | `list[int]` | Corrente em mA para cada canal em `CHANNELS`, na mesma ordem |
 | `STIM_DURATION` | `int/float` | Duração da estimulação em segundos antes de chamar `stop_ccl()` |
 
-> **Atenção:** `CHANNELS`, `PULSE_WIDTH` e `PULSE_CURRENT` devem ter o mesmo comprimento. Se `CHANNELS = [1, 2]`, então `PULSE_WIDTH` e `PULSE_CURRENT` também devem ter dois elementos — um por canal, na mesma ordem.
-
----
-
-## Exemplo: múltiplos canais
-
-```python
-CHANNELS       = [1, 3]
-PULSE_WIDTH    = [150, 200]  # canal 1: 150 µs, canal 3: 200 µs
-PULSE_CURRENT  = [6, 8]      # canal 1: 6 mA,  canal 3: 8 mA
-```
 
 ---
 
