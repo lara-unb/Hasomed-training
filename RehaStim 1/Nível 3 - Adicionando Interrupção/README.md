@@ -1,13 +1,13 @@
 # Nível 3 - Adicionando Interrupção
  
-### Introdução e Objetivos
+## Introdução e Objetivos
 No estágio anterior, o sistema operava em malha aberta com tempo fixo, o que limitava a intervenção do usuário durante a sessão de estimulação. O **Nível 3** introduz a capacidade de interrupção manual assistida por **Multithreading**. O objetivo principal é permitir que o experimentador monitore a resposta muscular em tempo real e encerre a estimulação de forma imediata e segura através de um comando de teclado.
 
 Neste guia, focaremos em como gerenciar duas tarefas simultâneas: a manutenção da comunicação serial com o RehaStim 1 e a escuta ativa de eventos do sistema operacional.
 
 ---
 
-### Conceitos Fundamentais para Estudo
+## Conceitos Fundamentais para Estudo
 
 Para a compreensão deste nível, é necessário dominar os seguintes termos técnicos:
 
@@ -18,19 +18,19 @@ Para a compreensão deste nível, é necessário dominar os seguintes termos té
 
 ---
 
-### Arquitetura do Sistema: O Uso de Threads
+## Arquitetura do Sistema: O Uso de Threads
 
 A implementação atual separa as responsabilidades do software em dois fluxos distintos que rodam simultaneamente:
 
 1.  **Thread Principal (Main Thread):** Responsável por instanciar a classe `StimNode`, configurar os parâmetros de corrente e largura de pulso, e executar o loop de atualização do CCL (`update_ccl`).
 2.  **Thread de Interrupção (Monitor Thread):** Uma thread secundária criada exclusivamente para aguardar a interação do usuário. Ela permanece em estado de espera (bloqueada) até que a tecla definida seja pressionada.
 
-#### Por que o `input()` bloqueante é utilizado?
+### Por que o `input()` bloqueante é utilizado?
 Ao contrário de sistemas puramente automáticos, a escolha de uma entrada bloqueante neste projeto é **estratégica e proposital**. Em contextos de pesquisa em neuroengenharia e reabilitação, o controle total do operador sobre o hardware é uma camada de segurança crítica. O bloqueio da thread de monitoramento garante que o programa não prossiga para etapas subsequentes sem que o pesquisador tenha validado visualmente a segurança da contração muscular produzida pelo RehaStim.
 
 ---
 
-### Referência Técnica de Implementação
+## Referência Técnica de Implementação
 
 Abaixo estão os novos componentes introduzidos na lógica do `main.py`:
 
@@ -43,7 +43,7 @@ Abaixo estão os novos componentes introduzidos na lógica do `main.py`:
 
 ---
 
-### Guia de Execução e Segurança
+## Guia de Execução e Segurança
 
 O fluxo de operação deve seguir rigorosamente os passos abaixo para garantir a integridade do equipamento e do sujeito de teste:
 
