@@ -47,7 +47,7 @@ Onde a norma $\|q\| = \sqrt{w^2 + x^2 + y^2 + z^2} = 1$.
 
 ### B. Conversão para Ângulos de Euler
 Para a lógica clínica, convertemos o quatérnio para o ângulo de inclinação (Roll - $\phi$):
-$$\phi = \operatorname{atan2}(2(wq + xy), 1 - 2(x^2 + y^2))$$
+$$\phi = \text{atan2}(2(wq + xy), 1 - 2(x^2 + y^2))$$
 
 
 ### C. Lógica de Controle (Trigger)
@@ -59,6 +59,11 @@ f(\theta) =
 \text{STIM\_OFF} & \text{se } |\theta| \leq \theta_c 
 \end{cases}
 $$
+
+### D. Temporização e Frenquência 
+No `stim_node.py`, a frequência ($f$) é convertida para o parâmetro `Main_Time` do protocolo ScienceMode:
+$$T_s = \frac{1000}{f}$$
+$$\text{Main\_Time} = \text{round} \left( \frac{T_s - 1.0}{0.5} \right)$$
 
 ---
 
