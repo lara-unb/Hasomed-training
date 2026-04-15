@@ -73,16 +73,7 @@ Para evitar atrasos na comunicação serial que poderiam desfigurar o ritmo da p
 
 ---
 
-## 6. Diferenciais para Congressos e Feiras
-
-Ao apresentar o Nível 6, destaque os seguintes pontos:
-1.  **Sincronismo em Tempo Real:** A capacidade do sistema de identificar a posição do pedal a 100Hz e responder instantaneamente.
-2.  **Segurança e Fadiga:** Explique que as janelas de ativação (zonas mortas) são fundamentais para prevenir a fadiga precoce do músculo estimulado artificialmente.
-3.  **Modularidade:** Como a classe `StimNode` (Nível 1) e os `utils` (Nível 5) permitiram criar um sistema complexo apenas mudando a lógica do `main`.
-
----
-
-## 7. Perspectivas e Próximos Passos (Evolução do Sistema)
+## 6. Perspectivas e Próximos Passos (Evolução do Sistema)
 
 O Nível 6 consolidou a automação da pedalada assistida. Para os próximos estágios de desenvolvimento, o foco será o refinamento da eficiência motora e a complexidade do recrutamento muscular.
 
