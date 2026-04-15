@@ -54,7 +54,7 @@ $$\phi = \text{atan2}(2(wq + xy), 1 - 2(x^2 + y^2))$$
 
 ### C. Lógica de Controle (Trigger)
 A ativação é baseada numa função degrau dependente do ângulo crítico ($\theta_c = 60^\circ$):
-
+```
 $$
 f(\theta) =
 \begin{cases}
@@ -62,7 +62,7 @@ f(\theta) =
 \text{STIM\_OFF} & \text{se } |\theta| \leq \theta_c
 \end{cases}
 $$
-
+```
 
 
 ---
