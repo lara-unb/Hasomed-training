@@ -58,8 +58,8 @@ A ativação é baseada numa função degrau dependente do ângulo crítico ($\t
 $$
 f(\theta) =
 \begin{cases}
-\text{STIM\_ON} & \text{se } |\theta| > \theta_c \\
-\text{STIM\_OFF} & \text{se } |\theta| \leq \theta_c
+\mathrm{STIM\_ON} & |\theta| > \theta_c \\
+\mathrm{STIM\_OFF} & |\theta| \leq \theta_c
 \end{cases}
 $$
 ```
