@@ -60,10 +60,7 @@ f(\theta) =
 \end{cases}
 $$
 
-### D. Temporização e Frenquência 
-No `stim_node.py`, a frequência ($f$) é convertida para o parâmetro `Main_Time` do protocolo ScienceMode:
-$$T_s = \frac{1000}{f}$$
-$$\text{Main\_Time} = \text{round} \left( \frac{T_s - 1.0}{0.5} \right)$$
+
 
 ---
 
