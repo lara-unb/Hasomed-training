@@ -47,6 +47,7 @@ Onde a norma $\|q\| = \sqrt{w^2 + x^2 + y^2 + z^2} = 1$.
 
 ### B. Conversão para Ângulos de Euler
 Para a lógica clínica, convertemos o quatérnio para o ângulo de inclinação (Roll - $\phi$):
+
 $$\phi = \operatorname{atan2}(2(wq + xy), 1 - 2(x^2 + y^2))$$
 
 
