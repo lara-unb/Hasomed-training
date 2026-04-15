@@ -1,1 +1,1 @@
-# Manual e Guia do Software de Teste para o I24 da Hasomes
+# Guia de uso do Software para teste do P24 da Hasomed
